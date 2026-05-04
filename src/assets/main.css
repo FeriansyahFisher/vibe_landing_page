@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #00C853;
+  --color-primary-dark: #1B5E20;
+  --color-dark: #0D0D0D;
+  --color-dark-light: #1A1A1A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl;
+  }
+
+  .glass-card-sm {
+    @apply backdrop-blur-md bg-white/5 border border-white/10 rounded-xl;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-dark font-semibold rounded-full hover:bg-green-400 transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-dark transition-all duration-300;
+  }
+}
